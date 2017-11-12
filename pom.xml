@@ -30,7 +30,7 @@
 			<plugin>
 				<groupId>org.qunix</groupId>
 				<artifactId>repo-resolver</artifactId>
-				<version>14.0.0</version>
+				<version>18.0.0</version>
 				<executions>
 					<execution>
 						<phase>validate</phase>
@@ -41,11 +41,13 @@
 						</goals>
 					</execution>
 				</executions>
-				<configuration combine.self="override">
+				<configuration>
 					<contains>
+					<!-- keep the repos contains this str -->
 						<contains>nexus-myproject</contains>
 					</contains>
 					<mirrors>
+					<!-- add this add default mirror -->
 						<mirror>http://nexus-myproject.192.168.42.17.nip.io/nexus/content/groups/public/
 						</mirror>
 					</mirrors>
@@ -53,185 +55,37 @@
 			</plugin>
 		</plugins>
 	</build>
-	<pluginRepositories combine.self="override">
+	<pluginRepositories>
 		<pluginRepository>
-			<id>central</id>
-			<url>http://nexus-myproject.192.168.42.17.nip.io/nexus/content/groups/public/
-						</url>
-			<releases>
-				<updatePolicy>always</updatePolicy>
-				<enabled>true</enabled>
-				<checksumPolicy>warn</checksumPolicy>
-			</releases>
-			<snapshots>
-				<updatePolicy>always</updatePolicy>
-				<enabled>true</enabled>
-				<checksumPolicy>warn</checksumPolicy>
-			</snapshots>
-
-		</pluginRepository>
-		<pluginRepository>
-			<id>1_3rd</id>
-			<url>http://nexus-myproject.192.168.42.17.nip.io/nexus/content/repositories/thirdparty
-						</url>
-			<releases>
-				<updatePolicy>always</updatePolicy>
-				<enabled>true</enabled>
-				<checksumPolicy>warn</checksumPolicy>
-			</releases>
-			<snapshots>
-				<updatePolicy>always</updatePolicy>
-				<enabled>true</enabled>
-				<checksumPolicy>warn</checksumPolicy>
-			</snapshots>
-
+			<id>3rd</id>
+			<url>http://nexus-myproject.192.168.42.17.nip.io/nexus/content/repositories/thirdparty</url>
 		</pluginRepository>
 		<pluginRepository>
 			<id>1_central</id>
-			<url>http://nexus-myproject.192.168.42.17.nip.io/nexus/content/repositories/central/
-						</url>
-			<releases>
-				<updatePolicy>always</updatePolicy>
-				<enabled>true</enabled>
-				<checksumPolicy>warn</checksumPolicy>
-			</releases>
-			<snapshots>
-				<updatePolicy>always</updatePolicy>
-				<enabled>true</enabled>
-				<checksumPolicy>warn</checksumPolicy>
-			</snapshots>
+			<url>http://nexus-myproject.192.168.42.17.nip.io/nexus/content/repositories/central/</url>
 		</pluginRepository>
 		<pluginRepository>
 			<id>1_public</id>
-			<url>http://nexus-myproject.192.168.42.17.nip.io/nexus/content/groups/public/
-						</url>
-			<releases>
-				<updatePolicy>always</updatePolicy>
-				<enabled>true</enabled>
-				<checksumPolicy>warn</checksumPolicy>
-			</releases>
-			<snapshots>
-				<updatePolicy>always</updatePolicy>
-				<enabled>true</enabled>
-				<checksumPolicy>warn</checksumPolicy>
-			</snapshots>
-
+			<url>http://nexus-myproject.192.168.42.17.nip.io/nexus/content/groups/public/</url>
 		</pluginRepository>
 
 	</pluginRepositories>
-	<repositories combine.self="override">
+	<repositories>
 		<repository>
 			<id>1_central</id>
-			<url>http://nexus-myproject.192.168.42.17.nip.io/nexus/content/repositories/central/
-						</url>
-			<releases>
-				<updatePolicy>always</updatePolicy>
-				<enabled>true</enabled>
-				<checksumPolicy>warn</checksumPolicy>
-			</releases>
-			<snapshots>
-				<updatePolicy>always</updatePolicy>
-				<enabled>true</enabled>
-				<checksumPolicy>warn</checksumPolicy>
-			</snapshots>
-
-		</repository>
-		<repository>
-			<id>1_nexus</id>
-			<url>http://nexus-myproject.192.168.42.17.nip.io/nexus/content/repositories/thirdparty
-						</url>
-			<releases>
-				<updatePolicy>always</updatePolicy>
-				<enabled>true</enabled>
-				<checksumPolicy>warn</checksumPolicy>
-			</releases>
-			<snapshots>
-				<updatePolicy>always</updatePolicy>
-				<enabled>true</enabled>
-				<checksumPolicy>warn</checksumPolicy>
-			</snapshots>
-
+			<url>http://nexus-myproject.192.168.42.17.nip.io/nexus/content/repositories/central/</url>
 		</repository>
 		<repository>
 			<id>1_public</id>
-			<url>http://nexus-myproject.192.168.42.17.nip.io/nexus/content/groups/public/
-						</url>
-			<releases>
-				<updatePolicy>always</updatePolicy>
-				<enabled>true</enabled>
-				<checksumPolicy>warn</checksumPolicy>
-			</releases>
-			<snapshots>
-				<updatePolicy>always</updatePolicy>
-				<enabled>true</enabled>
-				<checksumPolicy>warn</checksumPolicy>
-			</snapshots>
-
-		</repository>
-		<repository>
-			<id>central</id>
-			<url>http://nexus-myproject.192.168.42.17.nip.io/nexus/content/groups/public/
-						</url>
-			<releases>
-				<updatePolicy>always</updatePolicy>
-				<enabled>true</enabled>
-				<checksumPolicy>warn</checksumPolicy>
-			</releases>
-			<snapshots>
-				<updatePolicy>always</updatePolicy>
-				<enabled>true</enabled>
-				<checksumPolicy>warn</checksumPolicy>
-			</snapshots>
-
-		</repository>
-
-		<repository>
-			<id>1_apa</id>
-			<url>http://nexus-myproject.192.168.42.17.nip.io/nexus/content/repositories/apache-snapshots/
-						</url>
-			<releases>
-				<updatePolicy>always</updatePolicy>
-				<enabled>true</enabled>
-				<checksumPolicy>warn</checksumPolicy>
-			</releases>
-			<snapshots>
-				<updatePolicy>always</updatePolicy>
-				<enabled>true</enabled>
-				<checksumPolicy>warn</checksumPolicy>
-			</snapshots>
-
+			<url>http://nexus-myproject.192.168.42.17.nip.io/nexus/content/groups/public/</url>
 		</repository>
 		<repository>
 			<id>1_r</id>
-			<url>http://nexus-myproject.192.168.42.17.nip.io/nexus/content/repositories/releases/
-						</url>
-			<releases>
-				<updatePolicy>always</updatePolicy>
-				<enabled>true</enabled>
-				<checksumPolicy>warn</checksumPolicy>
-			</releases>
-			<snapshots>
-				<updatePolicy>always</updatePolicy>
-				<enabled>true</enabled>
-				<checksumPolicy>warn</checksumPolicy>
-			</snapshots>
-
+			<url>http://nexus-myproject.192.168.42.17.nip.io/nexus/content/repositories/releases/</url>
 		</repository>
 		<repository>
 			<id>1_s</id>
-			<url>http://nexus-myproject.192.168.42.17.nip.io/nexus/content/repositories/snapshots/
-						</url>
-			<releases>
-				<updatePolicy>always</updatePolicy>
-				<enabled>true</enabled>
-				<checksumPolicy>warn</checksumPolicy>
-			</releases>
-			<snapshots>
-				<updatePolicy>always</updatePolicy>
-				<enabled>true</enabled>
-				<checksumPolicy>warn</checksumPolicy>
-			</snapshots>
-
+			<url>http://nexus-myproject.192.168.42.17.nip.io/nexus/content/repositories/snapshots/</url>
 		</repository>
 	</repositories>
 
