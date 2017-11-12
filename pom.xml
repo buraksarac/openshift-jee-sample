@@ -46,39 +46,40 @@
             </plugin>
         </plugins>
       </build>
-    </profile>
-  </profiles>
-    <pluginRepositories>
+	    <pluginRepositories>
 				<pluginRepository>
 					<id>public</id>
-					<url>http://nexus-myproject.192.168.42.75.nip.io/nexus/content/groups/public/</url>
+					<url>nexus-myproject.192.168.42.75.nip.io/nexus/content/groups/public/</url>
 				</pluginRepository>
 			</pluginRepositories>
 			<repositories>
 
 				<repository>
 					<id>nexus</id>
-					<url>http://nexus-myproject.192.168.42.75.nip.io/nexus/content/repositories/thirdparty</url>
+					<url>nexus-myproject.192.168.42.75.nip.io/nexus/content/repositories/thirdparty</url>
 				</repository>
 				<repository>
 					<id>public</id>
-					<url>http://nexus-myproject.192.168.42.75.nip.io/nexus/content/groups/public/</url>
+					<url>nexus-myproject.192.168.42.75.nip.io/nexus/content/groups/public/</url>
 				</repository>
 				<repository>
 					<id>central</id>
-					<url>http://nexus-myproject.192.168.42.75.nip.io/nexus/content/repositories/central/</url>
+					<url>nexus-myproject.192.168.42.75.nip.io/nexus/content/repositories/central/</url>
 				</repository>
 				<repository>
 					<id>apa</id>
-					<url>http://nexus-myproject.192.168.42.75.nip.io/nexus/content/repositories/apache-snapshots/</url>
+					<url>nexus-myproject.192.168.42.75.nip.io/nexus/content/repositories/apache-snapshots/</url>
 				</repository>
 				<repository>
 					<id>r</id>
-					<url>http://nexus-myproject.192.168.42.75.nip.io/nexus/content/repositories/releases/</url>
+					<url>nexus-myproject.192.168.42.75.nip.io/nexus/content/repositories/releases/</url>
 				</repository>
 				<repository>
 					<id>s</id>
-					<url>http://nexus-myproject.192.168.42.75.nip.io/nexus/content/repositories/snapshots/</url>
+					<url>nexus-myproject.192.168.42.75.nip.io/nexus/content/repositories/snapshots/</url>
 				</repository>
 			</repositories>
+    </profile>
+  </profiles>
+    
 </project>
